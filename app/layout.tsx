@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Head from 'next/head'
 import { Merriweather } from 'next/font/google';
+import type { PropsWithChildren } from 'react';
 
 const merriweather = Merriweather({
   subsets: ['latin'],
@@ -15,14 +16,6 @@ export const metadata: Metadata = {
   generator: 'v0.dev',
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body suppressHydrationWarning>{children}</body>
-    </html>
-  )
+export default function RootLayout({ children }: PropsWithChildren) {
+  return <html><body>{children}</body></html>;
 }
