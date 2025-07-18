@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White */
+    --foreground: 222.2 84% 4.9%; /* Dark text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 210 60% 70%; /* Pastel Blue */
+    --primary-foreground: 210 60% 10%; /* Darker blue for contrast */
+
+    --secondary: 0 60% 80%; /* Pastel Red */
+    --secondary-foreground: 0 60% 20%; /* Darker red for contrast */
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 60% 70%; /* Using primary for accent for now, can be adjusted */
+    --accent-foreground: 210 60% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 60% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 210 60% 70%; /* Pastel Blue */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 60% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 60% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 60% 98%;
+
+    --primary: 210 60% 70%; /* Pastel Blue */
+    --primary-foreground: 210 60% 10%;
+
+    --secondary: 0 60% 80%; /* Pastel Red */
+    --secondary-foreground: 0 60% 20%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 60% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 60% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 210 60% 70%; /* Pastel Blue */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
